@@ -1,4 +1,4 @@
-# WeatherChecker
+# Weather Checker
 Desktop app written in Java using Swing & Open Weather Map API. 
 Presents current weather data for any city.
 
