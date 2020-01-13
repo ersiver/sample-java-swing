@@ -15,3 +15,6 @@ Presents current weather data for any city.
 ![weather_5](https://user-images.githubusercontent.com/58771510/72220923-bc87ed00-354d-11ea-859e-8133ae0f1f68.png)
 
 ![weather_6](https://user-images.githubusercontent.com/58771510/72220925-beea4700-354d-11ea-9097-405d60b75bde.png)
+
+#### Resource
+Free vector icons @ Flaticon.com designed by: Freepik, Swifticons, Good Ware, Vitaliy Gorbachev, Those Icon, Hirschwolf Lineal, Iconixar, Eucalyp, Pixel Perfect.
