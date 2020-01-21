@@ -74,7 +74,7 @@ public class OpenWeatherReader {
         Double pressure = (Double) mainMap.get("pressure");
         Double humidity = (Double) mainMap.get("humidity");
 
-        weather.setTemp(temp != null ? Math.round(temp)+"°C"   : "");
+        weather.setTemp(temp != null ? String.format("%.1f°C", temp) : "");
         weather.setTempMin(tempMin != null ? Math.round(tempMin)+"°C" : "");
         weather.setTempMax(tempMax != null ? Math.round(tempMax)+"°C"  : "");
         weather.setPressure(pressure != null ? Math.round(pressure) + "hPa" : "");
