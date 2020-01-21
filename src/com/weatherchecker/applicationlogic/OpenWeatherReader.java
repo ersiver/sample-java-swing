@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class OpenWeatherReader {
-    private String API_KEY = "bxxxxxxxxxxxxxxxxxxxxxxxx"; //replace with the api key
+    private String API_KEY = "bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //replace with the api key
     private String urlString;
 
     public void searchWeather(Weather weather, String cityName) {
@@ -74,18 +74,18 @@ public class OpenWeatherReader {
         Double pressure = (Double) mainMap.get("pressure");
         Double humidity = (Double) mainMap.get("humidity");
 
-        weather.setTemp(temp != null ? String.format("%.1f°C", temp) : "");
-        weather.setTempMin(tempMin != null ? String.format("%.1f°C", tempMin) : "");
-        weather.setTempMax(tempMax != null ? String.format("%.1f°C", tempMax) : "");
-        weather.setPressure(pressure != null ? String.format("%.1f hPa", pressure) : "");
-        weather.setHumidity(humidity != null ? humidity + "%" : "");
+        weather.setTemp(temp != null ? Math.round(temp)+"°C"   : "");
+        weather.setTempMin(tempMin != null ? Math.round(tempMin)+"°C" : "");
+        weather.setTempMax(tempMax != null ? Math.round(tempMax)+"°C"  : "");
+        weather.setPressure(pressure != null ? Math.round(pressure) + "hPa" : "");
+        weather.setHumidity(humidity != null ? Math.round(humidity) + "%" : "");
     }
 
     //3.
     private void accessWindMap(Map<String, Object> resultMap, Weather weather) {
         Map<String, Object> windMap = jsonToMap(resultMap.get("wind").toString());
         Double windSpeed = (Double) windMap.get("speed");
-        weather.setWind(windSpeed != null ? String.format("%.1f m/s", windSpeed) : "");
+        weather.setWind(windSpeed != null ? Math.round(windSpeed) + "m/s" : "");
     }
 
     //4.
